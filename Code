@@ -1,0 +1,27 @@
+import java.io.*;
+import java.io.PrintWriter;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        try {
+    File writeToFile = new File("PrintWriterFunc.txt");
+
+    if(!writeToFile.exists()){
+        writeToFile.createNewFile();
+    }
+
+    PrintWriter pw = new PrintWriter(writeToFile);
+    pw.println("Voorbeeld");
+    pw.println(100123);
+    pw.close();
+    System.out.println("Klaar");
+
+    } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+}
